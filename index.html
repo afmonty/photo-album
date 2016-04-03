@@ -2,10 +2,82 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/normalize/lib/normalize.js">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-
+<header class = "header">My Albums</header>
+<div class = "sidebar-nav">
+  <div class="row">
+	<div class="col-xs-6 col-md-3">
+	 <ul class="navList">
+	 <a href="#" id = "album" class  = "beaches"><li>Beaches</li></a>
+	 <a href="#" id = "album" class = "christmas"><li>Christmas</li></a>
+	 <a href="#" id = "album" class = "coffee"><li>Coffee</li></a>
+	 <a href="#"  id = "album"class = "flowers"><li>Flowers</li></a>
+	 <a href="#"  id = "album"class = "horses"><li>Horses</li></a>
+	 <a href="#"  id = "album" class = "ns"><li>Night Sky</li></a>
+	 </ul>
+   </div>
+ </div>  	 
+</div> 
+<div class="display">
+	<div class = "chAlbum">
+	  <div class="row">
+		   <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/treeOrnament.jpeg">
+		        <h3>Christmas Tree Ornament</h3>
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/wreath.jpeg">
+		        <h3>Door Wreath</h3>
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/santa.jpeg">
+		        <h3>Santa Claus</h3>
+		    </a>
+		  </div>
+	 </div>
+	</div>
+	<div class = "flAlbum">
+	  <div class="row">
+		   <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/blossom.jpeg">
+		        <h3>Tree Blossom</h3>
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/roses.jpeg">
+		        <h3>Antique Roses</h3>
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="images/redPoppy.jpeg">
+		        <h3>Red Poppy</h3>
+		    </a>
+		  </div>
+	  </div>
+ 	</div>
+	 <div class = "row" id = "beachDisplay">
+	 	<div class="col-xs-6 col-md-3" id = "beaches">
+	 	</div>
+	 </div>
+	 <div class = "album4">
+	 </div>
+	 <div class = "album5">
+	 </div>
+	 <div class = "album6">
+	 </div>
+</div>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
 </body>
