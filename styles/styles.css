@@ -9,8 +9,8 @@ header{
 	clear: both;
 	width: auto;
 	padding: 1em;
-	height: 20em;
-	display: inline-block;
+	height: auto;
+	display: none;
 	float: left;
 }
 ul{
@@ -21,12 +21,16 @@ li{
 	line-height: 30.5pt;
 	clear: both;
 }
+button{
+	margin-left: 3em;
+	border-radius: 10%
+}
 .display{
 	display: inline-block;
 	overflow: hidden;
 	float: left;
 	width: 80%;
-	margin-left: 3em;
+	margin-left: 5em;
 }
 #albumDisplay{
 	clear: both;
@@ -37,5 +41,12 @@ li{
 	overflow: hidden;
 	float: left;
 	width: 80%;
-	margin-left: 3em;
+	margin-left: 5em;
 }
+/*.back{
+	text-align: center;
+	background-color: #C1C1C1;
+	height: 1em;
+	width: auto;
+
+}*/
