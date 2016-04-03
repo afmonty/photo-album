@@ -8,8 +8,8 @@ header{
 	background-color: #C1C1C1;
 	clear: both;
 	width: auto;
-	padding: 2em;
-	height: 30em;
+	padding: 1em;
+	height: 20em;
 	display: inline-block;
 	float: left;
 }
@@ -17,23 +17,25 @@ ul{
 	clear: both;
 }
 li{
-	font-size: 16pt;
+	font-size: 14pt;
 	line-height: 30.5pt;
+	clear: both;
 }
 .display{
 	display: inline-block;
 	overflow: hidden;
 	float: left;
-	width: 60%
-	margin: auto;
+	width: 80%;
+	margin-left: 3em;
 }
-#album{
+#albumDisplay{
 	clear: both;
 	overflow: hidden;
 }
-.chAlbum{
-	display: none;
-}
-.flAlbum{
-	display: none;
+.landing{
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+	width: 80%;
+	margin-left: 3em;
 }

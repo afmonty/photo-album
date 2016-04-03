@@ -11,7 +11,7 @@ var $albums = [
 				label: "Door Wreath",
 			},
 			{
-				fileNm: "images/santa/jpeg",
+				fileNm: "images/santa.jpeg",
 				label: "Santa Clause",
 			}
 		]
@@ -20,16 +20,19 @@ var $albums = [
 		albumName: "Coffee",
 		albumPic: [
 			{
-				fileNm: "images/thinkCoffe.jpeg",
+				fileNm: "images/thinkCoffee.jpeg",
 				label: "Coffee Heaven/Haven",
+				href: "images/thinkCoffee.html"
 			},
 			{
 				fileNm: "images/heartLatte.jpeg",
 				label: "Latte wth love",
+				href: "images/heartLatte.html"
 			},
 			{
 				fileNm: "images/coffeeBeans.jpeg",
 				label: "Beans Beans Beans",
+				href: "images/coffeeBeans.jpeg"
 			}
 		]
 	},
@@ -37,7 +40,7 @@ var $albums = [
 		albumName: "Beaches",
 		albumPic: [
 			{
-				fileNm: "images'/sunsetBeach.jpeg",
+				fileNm: "images/sunsetBeach.jpeg",
 				label: "Beautiful Sunset",
 			},
 			{
@@ -105,35 +108,97 @@ var $albums = [
 
 console.log($albums[3].albumPic[2]);
 
+var clear = function(){
+	$("#albumDisplay").empty();
+}
 
-$(".beaches").click(function() {
+
+$("#beaches").click(function() {
+   $(".landing").css("display", "none");
+   clear();
 	for(i=0; i<$albums[2].albumPic.length; i++) {
-	  $("#beaches").append("<a href = '#' class = 'thumbnail'><img src '"+$albums[2].albumPic[i].fileNm+"'/><h3>"+$albums[2].albumPic[i].label+
-		"</h3></a>");
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '#'>"
+	  	+"<img src ='"+$albums[2].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[2].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
 	};	
 });
 
-$(".christmas").click(function() {
-	alert("christmas clicked");
-	$(".chAlbum").css("display" , "inline-block");
+
+$("#christmas").click(function() {
+	$(".landing").css("display", "none");
+	clear();
+	for(i=0; i<$albums[0].albumPic.length; i++) {
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '#'>"
+	  	+"<img src ='"+$albums[0].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[0].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
+	};	
 });
 
-$(".coffee").click(function() {
-	alert("coffee clicked");
+$("#coffee").click(function() {
+	$(".landing").css("display", "none");
+	clear();
+	for(i=0; i<$albums[1].albumPic.length; i++) {
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '"+$albums[1].albumPic[i].href+"'>"
+	  	+"<img src ='"+$albums[1].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[1].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
+	};	
 });
 
-$(".flowers").click(function() {
-	alert("flowers clicked");
-	$(".flAlbum").css("display" , "inline-block");
-});
-$(".horses").click(function() {
-	alert("horses clicked");
 
+$("#flowers").click(function() {
+	$(".landing").css("display", "none");
+	clear();
+	for(i=0; i<$albums[5].albumPic.length; i++) {
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '#'>"
+	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[5].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
+	};	
 });
 
-$(".ns").click(function() {
-	alert("Night Sky clicked");
+$("#horses").click(function() {
+	$(".landing").css("display", "none");
+	clear();
+	for(i=0; i<$albums[3].albumPic.length; i++) {
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '#'>"
+	  	+"<img src ='"+$albums[3].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[3].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
+	};	
 });
+
+$("#ns").click(function() {
+	$(".landing").css("display", "none");
+	clear();
+	for(i=0; i<$albums[4].albumPic.length; i++) {
+	  $("#albumDisplay").append(
+	  	"<div class='col-sm-6 col-md-4'>"
+	  	+"<div class='thumbnail'>"
+	  	+"<a href = '#'>"
+	  	+"<img src ='"+$albums[4].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[4].albumPic[i].label+
+		"</h3>"+"</a>"+"</div>"+"</div>");
+	};	
+});
+
 
 
 $( ".addButton" ).click(function () {
