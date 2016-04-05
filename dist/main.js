@@ -106,10 +106,11 @@ $(".home").click(function () {
 
 //$().click(displayAlbum(e));
 
-$("#beaches, #beachesDiv").on('click', function () {
-	var $clicked = "beaches";
+$("#beaches, #beachesDiv").on('click', function (e) {
+	var $clicked = $(e.target);
+	//let $clicked = "beaches";
 	console.log($clicked);
-	displayAlbum($clicked);
+	displayAlbum();
 });
 
 // $("#beaches, #beachesDiv").click(function({target}) {

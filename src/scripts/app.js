@@ -124,7 +124,7 @@ var $albums = [
 
 
 
-var clear = function(){
+const clear = () => {
 	$("#albumDisplay").empty();
 }
 
@@ -136,10 +136,11 @@ $(".home").click(function(){
 
  //$().click(displayAlbum(e));
 
- $("#beaches, #beachesDiv").on('click', () => {
-	let $clicked = "beaches";
+ $("#beaches, #beachesDiv").on('click', (e) => {
+	let $clicked = $(e.target);
+	//let $clicked = "beaches";
 	console.log( $clicked);
-	displayAlbum($clicked);
+	displayAlbum();
  });
 
 
