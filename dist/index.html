@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../node_modules/normalize/lib/normalize.js">
+	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header class = "header">My Albums</header>
+<div class = "sidebar-nav">
+  <div class="row">
+	<div class="col-xs-6 col-md-3">
+	 <ul class="navList">
+		 <a href="#" class = "album" id  = "beaches"><li>Beaches</li></a>
+		 <a href="#" class = "album" id = "christmas"><li>Christmas</li></a>
+		 <a href="#" class = "album" id = "coffee"><li>Coffee</li></a>
+		 <a href="#"  class = "album" id = "flowers"><li>Flowers</li></a>
+		 <a href="#"  class = "album" id = "horses"><li>Horses</li></a>
+		 <a href="#" class = "album" id = "ns" ><li>NightSky</li></a>
+	 </ul>
+	 <button class = "home">Home</button>
+   </div>
+ </div>  	 
+</div> 
+
+<div class = "landing">
+  <div class = "row">
+	<div class="col-xs-6 col-md-3" id = "beachesDiv">
+	  <div class="thumbnail">
+	  	<img src="images/sunsetBeach.jpeg">
+	  	<h4>Beaches Album</h4>
+	  </div>
+	</div>
+	<div class="col-xs-6 col-md-3" id="flowersDiv">
+	  <div class="thumbnail">
+	  	<img src="images/roses.jpeg">
+	  	<h4>Flowers Album</h4>
+	  </div>
+	</div>
+	<div class="col-xs-6 col-md-3" id = "nsDiv">
+	  <div class="thumbnail">
+	  	<img src="images/moon.jpeg" class="ns">
+	  	<h4>Night Sky Album</h4>
+	  </div>
+	</div>
+  </div>
+  <div class = "row">
+	<div class="col-xs-6 col-md-3" id = "horsesDiv">
+	  <div class="thumbnail">
+	  	<img src="images/pony.jpeg">
+	  	<h4>Horses Album</h4>
+	  </div>
+	</div>
+	<div class="col-xs-6 col-md-3" id = "coffeeDiv">
+	  <div class="thumbnail">
+	  	<img src="images/coffeeBeans.jpeg" class="coffeeDiv">
+	  	<h4>Coffee Album</h4>
+	  </div>
+	</div>
+	<div class="col-xs-6 col-md-3" id = "christmasDiv">
+	  <div class="thumbnail">
+	  	<img src="images/santa.jpeg" id="christmas">
+	  	<h4>Christmas Album</h4>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class = "display">
+	<div class="row" id = "albumDisplay">
+	</div>
+</div>
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
