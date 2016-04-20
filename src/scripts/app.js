@@ -1,7 +1,7 @@
-//import $ from 'jquery';
+
 var $albums = [
 	{
-		albumName: "Christmas",
+		albumName: "christmas",
 		albumPic: [
 			{
 				fileNm: "images/treeOrnament.jpeg",
@@ -21,7 +21,7 @@ var $albums = [
 		]
 	},
 	{
-		albumName: "Coffee",
+		albumName: "coffee",
 		albumPic: [
 			{
 				fileNm: "images/thinkCoffee.jpeg",
@@ -41,7 +41,7 @@ var $albums = [
 		]
 	},
 	{
-		albumName: "Beaches",
+		albumName: "beaches",
 		albumPic: [
 			{
 				fileNm: "images/sunsetBeach.jpeg",
@@ -61,7 +61,7 @@ var $albums = [
 		]
 	},
 	{
-		albumName: "Horses",
+		albumName: "horses",
 		albumPic: [
 			{
 				fileNm: "images/pony.jpeg",
@@ -81,7 +81,7 @@ var $albums = [
 		]
 	},
 	{
-		albumName: "Night",
+		albumName: "night",
 		albumPic: [
 			{
 				fileNm: "images/moon.jpeg",
@@ -126,42 +126,47 @@ var $albums = [
 
 const clear = () => {
 	$("#albumDisplay").empty();
-}
+};
 
-$(".home").click(function(){
+$(".home").click( () => {
 	$(".sidebar-nav").css("display", "none");
 	$(".landing").css("display", "inline-block");
 	$("#albumDisplay").empty();
 });
 
- //$().click(displayAlbum(e));
 
- $("#beaches, #beachesDiv").on('click', (e) => {
-	let $clicked = $(e.target);
-	//let $clicked = "beaches";
-	console.log( $clicked);
-	displayAlbum();
+
+
+ $(".albumLink").on('click', function(event) {
+	let $clicked = $(this).data('album');
+	console.log(this);
+	console.log($clicked);
+	let filtered = $albums.filter( (albumObj) => {
+		if($clicked === albumObj.albumName) {
+			return true;
+		} else {
+			return false;
+		}
+		console.log(albumObj);
+	})
+	console.log(filtered);//this is returning a single object.  Get albumPic out of this object
  });
 
 
-// $("#beaches, #beachesDiv").click(function({target}) {
-//     console.log(`You clicked on ${target}`);
-
-// });
 	
-function displayAlbum(e) {
+function displayAlbum() {
 	console.log("in disply function")
 	$(".landing").css("display", "none");
 	$(".sidebar-nav").css("display", "inline-block");
     clear();
-    console.log($clicked);
-	for(i=0; i<$albums[$clicked].albumPic.length; i++) {
+    console.log($index);
+	for(var i=0; i<$albums[$index].albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[$clicked].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[$clicked].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[$clicked].albumPic[i].label+
+	  	+"<a href = '"+$albums[$index].albumPic[i].href+"'>"
+	  	+"<img src ='"+$albums[$index].albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+$albums[$index].albumPic[i].label+
 		"</h3>"+"</a>"+"</div>"+"</div>");
 	}	
 };
@@ -176,7 +181,7 @@ $("#christmas, #christmasDiv").click(function() {
 	$(".sidebar-nav").css("display", "inline-block");
 	clear();
 
-	for(i=0; i<$albums[0].albumPic.length; i++) {
+	for(var i=0; i<$albums[0].albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"
@@ -191,7 +196,7 @@ $("#coffee, #coffeeDiv").click(function() {
 	$(".landing").css("display", "none");
 	$(".sidebar-nav").css("display", "inline-block");
 	clear();
-	for(i=0; i<$albums[1].albumPic.length; i++) {
+	for(let i=0; i<$albums[1].albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"
@@ -203,26 +208,26 @@ $("#coffee, #coffeeDiv").click(function() {
 });
 
 
-$("#flowers, #flowersDiv").click(function() {
-	$(".landing").css("display", "none");
-	$(".sidebar-nav").css("display", "inline-block");
-	clear();
-	for(i=0; i<$albums[5].albumPic.length; i++) {
-	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[5].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[5].albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
-	};	
-});
+// $("#flowers, #flowersDiv").click(function() {
+// 	$(".landing").css("display", "none");
+// 	$(".sidebar-nav").css("display", "inline-block");
+// 	clear();
+// 	for(let i=0; i<$albums[5].albumPic.length; i++) {
+// 	  $("#albumDisplay").append(
+// 	  	"<div class='col-sm-6 col-md-4'>"
+// 	  	+"<div class='thumbnail'>"
+// 	  	+"<a href = '"+$albums[5].albumPic[i].href+"'>"
+// 	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
+// 	  	+"<h3>"+$albums[5].albumPic[i].label+
+// 		"</h3>"+"</a>"+"</div>"+"</div>");
+// 	};	
+// });
 
 $("#horses, #horsesDiv").click(function() {
 	$(".landing").css("display", "none");
 	$(".sidebar-nav").css("display", "inline-block");
 	clear();
-	for(i=0; i<$albums[3].albumPic.length; i++) {
+	for(let i=0; i<$albums[3].albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"
@@ -237,7 +242,7 @@ $("#ns, #nsDiv").click(function() {
 	$(".landing").css("display", "none");
 	$(".sidebar-nav").css("display", "inline-block");
 	clear();
-	for(i=0; i<$albums[4].albumPic.length; i++) {
+	for(let i=0; i<$albums[4].albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"

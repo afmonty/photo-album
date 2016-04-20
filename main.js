@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/Users/admin/tiy/day-25/Photo-Album/src/app.js' from '/Users/admin/tiy/day-25/Photo-Album'");
