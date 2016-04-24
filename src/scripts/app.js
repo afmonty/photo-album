@@ -158,11 +158,24 @@ function displayAlbum(filtAlbum) {
     clear();
 	for(var i=0; i<filtAlbum.albumPic.length; i++) {
 	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+filtAlbum.albumPic[i].href+"'>"
-	  	+"<img src ='"+filtAlbum.albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+filtAlbum.albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
+	  	`<div class='col-sm-6 col-md-4'>
+		   <div class='thumbnail'>
+		     <a href = '${filtAlbum.albumPic[i].href}'>
+		       <img src ='${filtAlbum.albumPic[i].fileNm}'/>
+		       <h3>${filtAlbum.albumPic[i].label}</h3>
+		     </a>
+		   </div>
+		  </div>`
+		  )
 	}	
 };
+
+
+
+
+
+
+
+
+
+
