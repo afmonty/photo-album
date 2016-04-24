@@ -81,7 +81,7 @@ var $albums = [
 		]
 	},
 	{
-		albumName: "night",
+		albumName: "ns",
 		albumPic: [
 			{
 				fileNm: "images/moon.jpeg",
@@ -166,95 +166,3 @@ function displayAlbum(filtAlbum) {
 		"</h3>"+"</a>"+"</div>"+"</div>");
 	}	
 };
-
-
-
-
-
-
-// $("#christmas, #christmasDiv").click(function() {
-// 	$(".landing").css("display", "none");
-// 	$(".sidebar-nav").css("display", "inline-block");
-// 	clear();
-
-// 	for(var i=0; i<$albums[0].albumPic.length; i++) {
-// 	  $("#albumDisplay").append(
-// 	  	"<div class='col-sm-6 col-md-4'>"
-// 	  	+"<div class='thumbnail'>"
-// 	  	+"<a href = '"+$albums[0].albumPic[i].href+"'>"
-// 	  	+"<img src ='"+$albums[0].albumPic[i].fileNm+"'/>"
-// 	  	+"<h3>"+$albums[0].albumPic[i].label+
-// 		"</h3>"+"</a>"+"</div>"+"</div>");
-// 	};	
-// });
-
-// $("#coffee, #coffeeDiv").click(function() {
-// 	$(".landing").css("display", "none");
-// 	$(".sidebar-nav").css("display", "inline-block");
-// 	clear();
-// 	for(let i=0; i<$albums[1].albumPic.length; i++) {
-// 	  $("#albumDisplay").append(
-// 	  	"<div class='col-sm-6 col-md-4'>"
-// 	  	+"<div class='thumbnail'>"
-// 	  	+"<a href = '"+$albums[1].albumPic[i].href+"'>"
-// 	  	+"<img src ='"+$albums[1].albumPic[i].fileNm+"'/>"
-// 	  	+"<h3>"+$albums[1].albumPic[i].label+
-// 		"</h3>"+"</a>"+"</div>"+"</div>");
-// 	};	
-// });
-
-
-// // $("#flowers, #flowersDiv").click(function() {
-// // 	$(".landing").css("display", "none");
-// // 	$(".sidebar-nav").css("display", "inline-block");
-// // 	clear();
-// // 	for(let i=0; i<$albums[5].albumPic.length; i++) {
-// // 	  $("#albumDisplay").append(
-// // 	  	"<div class='col-sm-6 col-md-4'>"
-// // 	  	+"<div class='thumbnail'>"
-// // 	  	+"<a href = '"+$albums[5].albumPic[i].href+"'>"
-// // 	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
-// // 	  	+"<h3>"+$albums[5].albumPic[i].label+
-// // 		"</h3>"+"</a>"+"</div>"+"</div>");
-// // 	};	
-// // });
-
-// $("#horses, #horsesDiv").click(function() {
-// 	$(".landing").css("display", "none");
-// 	$(".sidebar-nav").css("display", "inline-block");
-// 	clear();
-// 	for(let i=0; i<$albums[3].albumPic.length; i++) {
-// 	  $("#albumDisplay").append(
-// 	  	"<div class='col-sm-6 col-md-4'>"
-// 	  	+"<div class='thumbnail'>"
-// 	  	+"<a href = '"+$albums[3].albumPic[i].href+"'>"
-// 	  	+"<img src ='"+$albums[3].albumPic[i].fileNm+"'/>"
-// 	  	+"<h3>"+$albums[3].albumPic[i].label+
-// 		"</h3>"+"</a>"+"</div>"+"</div>");
-// 	};	
-// });
-
-// $("#ns, #nsDiv").click(function() {
-// 	$(".landing").css("display", "none");
-// 	$(".sidebar-nav").css("display", "inline-block");
-// 	clear();
-// 	for(let i=0; i<$albums[4].albumPic.length; i++) {
-// 	  $("#albumDisplay").append(
-// 	  	"<div class='col-sm-6 col-md-4'>"
-// 	  	+"<div class='thumbnail'>"
-// 	  	+"<a href = '"+$albums[4].albumPic[i].href+"'>"
-// 	  	+"<img src ='"+$albums[4].albumPic[i].fileNm+"'/>"
-// 	  	+"<h3>"+$albums[4].albumPic[i].label+
-// 		"</h3>"+"</a>"+"</div>"+"</div>");
-// 	};	
-// });
-
-
-
-// $( ".addButton" ).click(function () {
-//   if ( $( ".input" ).is( ":hidden" ) ) {
-//     $( ".input" ).slideDown( "slow" );
-//   } else {
-//     $( ".input" ).slideUp();
-//   }
-// });
