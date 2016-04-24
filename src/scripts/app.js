@@ -137,36 +137,32 @@ $(".home").click( () => {
 
 
 
- $(".albumLink").on('click', function(event) {
+ $(".albumLink").on('click',function (event) {
 	let $clicked = $(this).data('album');
-	console.log(this);
-	console.log($clicked);
 	let filtered = $albums.filter( (albumObj) => {
 		if($clicked === albumObj.albumName) {
 			return true;
 		} else {
 			return false;
 		}
-		console.log(albumObj);
+	
 	})
-	console.log(filtered);//this is returning a single object.  Get albumPic out of this object
+ 	displayAlbum(filtered[0]);
  });
 
 
 	
-function displayAlbum() {
-	console.log("in disply function")
+function displayAlbum(filtAlbum) {
 	$(".landing").css("display", "none");
 	$(".sidebar-nav").css("display", "inline-block");
     clear();
-    console.log($index);
-	for(var i=0; i<$albums[$index].albumPic.length; i++) {
+	for(var i=0; i<filtAlbum.albumPic.length; i++) {
 	  $("#albumDisplay").append(
 	  	"<div class='col-sm-6 col-md-4'>"
 	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[$index].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[$index].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[$index].albumPic[i].label+
+	  	+"<a href = '"+filtAlbum.albumPic[i].href+"'>"
+	  	+"<img src ='"+filtAlbum.albumPic[i].fileNm+"'/>"
+	  	+"<h3>"+filtAlbum.albumPic[i].label+
 		"</h3>"+"</a>"+"</div>"+"</div>");
 	}	
 };
@@ -176,89 +172,89 @@ function displayAlbum() {
 
 
 
-$("#christmas, #christmasDiv").click(function() {
-	$(".landing").css("display", "none");
-	$(".sidebar-nav").css("display", "inline-block");
-	clear();
-
-	for(var i=0; i<$albums[0].albumPic.length; i++) {
-	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[0].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[0].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[0].albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
-	};	
-});
-
-$("#coffee, #coffeeDiv").click(function() {
-	$(".landing").css("display", "none");
-	$(".sidebar-nav").css("display", "inline-block");
-	clear();
-	for(let i=0; i<$albums[1].albumPic.length; i++) {
-	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[1].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[1].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[1].albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
-	};	
-});
-
-
-// $("#flowers, #flowersDiv").click(function() {
+// $("#christmas, #christmasDiv").click(function() {
 // 	$(".landing").css("display", "none");
 // 	$(".sidebar-nav").css("display", "inline-block");
 // 	clear();
-// 	for(let i=0; i<$albums[5].albumPic.length; i++) {
+
+// 	for(var i=0; i<$albums[0].albumPic.length; i++) {
 // 	  $("#albumDisplay").append(
 // 	  	"<div class='col-sm-6 col-md-4'>"
 // 	  	+"<div class='thumbnail'>"
-// 	  	+"<a href = '"+$albums[5].albumPic[i].href+"'>"
-// 	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
-// 	  	+"<h3>"+$albums[5].albumPic[i].label+
+// 	  	+"<a href = '"+$albums[0].albumPic[i].href+"'>"
+// 	  	+"<img src ='"+$albums[0].albumPic[i].fileNm+"'/>"
+// 	  	+"<h3>"+$albums[0].albumPic[i].label+
 // 		"</h3>"+"</a>"+"</div>"+"</div>");
 // 	};	
 // });
 
-$("#horses, #horsesDiv").click(function() {
-	$(".landing").css("display", "none");
-	$(".sidebar-nav").css("display", "inline-block");
-	clear();
-	for(let i=0; i<$albums[3].albumPic.length; i++) {
-	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[3].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[3].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[3].albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
-	};	
-});
-
-$("#ns, #nsDiv").click(function() {
-	$(".landing").css("display", "none");
-	$(".sidebar-nav").css("display", "inline-block");
-	clear();
-	for(let i=0; i<$albums[4].albumPic.length; i++) {
-	  $("#albumDisplay").append(
-	  	"<div class='col-sm-6 col-md-4'>"
-	  	+"<div class='thumbnail'>"
-	  	+"<a href = '"+$albums[4].albumPic[i].href+"'>"
-	  	+"<img src ='"+$albums[4].albumPic[i].fileNm+"'/>"
-	  	+"<h3>"+$albums[4].albumPic[i].label+
-		"</h3>"+"</a>"+"</div>"+"</div>");
-	};	
-});
+// $("#coffee, #coffeeDiv").click(function() {
+// 	$(".landing").css("display", "none");
+// 	$(".sidebar-nav").css("display", "inline-block");
+// 	clear();
+// 	for(let i=0; i<$albums[1].albumPic.length; i++) {
+// 	  $("#albumDisplay").append(
+// 	  	"<div class='col-sm-6 col-md-4'>"
+// 	  	+"<div class='thumbnail'>"
+// 	  	+"<a href = '"+$albums[1].albumPic[i].href+"'>"
+// 	  	+"<img src ='"+$albums[1].albumPic[i].fileNm+"'/>"
+// 	  	+"<h3>"+$albums[1].albumPic[i].label+
+// 		"</h3>"+"</a>"+"</div>"+"</div>");
+// 	};	
+// });
 
 
+// // $("#flowers, #flowersDiv").click(function() {
+// // 	$(".landing").css("display", "none");
+// // 	$(".sidebar-nav").css("display", "inline-block");
+// // 	clear();
+// // 	for(let i=0; i<$albums[5].albumPic.length; i++) {
+// // 	  $("#albumDisplay").append(
+// // 	  	"<div class='col-sm-6 col-md-4'>"
+// // 	  	+"<div class='thumbnail'>"
+// // 	  	+"<a href = '"+$albums[5].albumPic[i].href+"'>"
+// // 	  	+"<img src ='"+$albums[5].albumPic[i].fileNm+"'/>"
+// // 	  	+"<h3>"+$albums[5].albumPic[i].label+
+// // 		"</h3>"+"</a>"+"</div>"+"</div>");
+// // 	};	
+// // });
 
-$( ".addButton" ).click(function () {
-  if ( $( ".input" ).is( ":hidden" ) ) {
-    $( ".input" ).slideDown( "slow" );
-  } else {
-    $( ".input" ).slideUp();
-  }
-});
+// $("#horses, #horsesDiv").click(function() {
+// 	$(".landing").css("display", "none");
+// 	$(".sidebar-nav").css("display", "inline-block");
+// 	clear();
+// 	for(let i=0; i<$albums[3].albumPic.length; i++) {
+// 	  $("#albumDisplay").append(
+// 	  	"<div class='col-sm-6 col-md-4'>"
+// 	  	+"<div class='thumbnail'>"
+// 	  	+"<a href = '"+$albums[3].albumPic[i].href+"'>"
+// 	  	+"<img src ='"+$albums[3].albumPic[i].fileNm+"'/>"
+// 	  	+"<h3>"+$albums[3].albumPic[i].label+
+// 		"</h3>"+"</a>"+"</div>"+"</div>");
+// 	};	
+// });
+
+// $("#ns, #nsDiv").click(function() {
+// 	$(".landing").css("display", "none");
+// 	$(".sidebar-nav").css("display", "inline-block");
+// 	clear();
+// 	for(let i=0; i<$albums[4].albumPic.length; i++) {
+// 	  $("#albumDisplay").append(
+// 	  	"<div class='col-sm-6 col-md-4'>"
+// 	  	+"<div class='thumbnail'>"
+// 	  	+"<a href = '"+$albums[4].albumPic[i].href+"'>"
+// 	  	+"<img src ='"+$albums[4].albumPic[i].fileNm+"'/>"
+// 	  	+"<h3>"+$albums[4].albumPic[i].label+
+// 		"</h3>"+"</a>"+"</div>"+"</div>");
+// 	};	
+// });
+
+
+
+// $( ".addButton" ).click(function () {
+//   if ( $( ".input" ).is( ":hidden" ) ) {
+//     $( ".input" ).slideDown( "slow" );
+//   } else {
+//     $( ".input" ).slideUp();
+//   }
+// });
