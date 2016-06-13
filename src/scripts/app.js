@@ -154,6 +154,7 @@ $(".home").click( () => {
 	
 function displayAlbum(filtAlbum) {
 	$(".landing").css("display", "none");
+	$("header").css("display", "block");
 	$(".sidebar-nav").css("display", "inline-block");
     clear();
 	for(var i=0; i<filtAlbum.albumPic.length; i++) {
