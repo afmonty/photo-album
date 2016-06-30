@@ -4,19 +4,19 @@ var $albums = [
 		albumName: "christmas",
 		albumPic: [
 			{
-				fileNm: "images/treeOrnament.jpeg",
+				fileNm: "./dist/images/treeOrnament.jpeg",
 				label: "Christmas Tree Ornament",
-				href: "images/treeOrnament.html"
+				href: "./dist/images/treeOrnament.html"
 			},
 			{
-				fileNm: "images/wreath.jpeg",
+				fileNm: "./dist/images/wreath.jpeg",
 				label: "Door Wreath",
-				href: "images/wreath.html"
+				href: "./dist/images/wreath.html"
 			},
 			{
-				fileNm: "images/santa.jpeg",
+				fileNm: "./dist/images/santa.jpeg",
 				label: "Santa Clause",
-				href: "images/santa.html"
+				href: "./dist/images/santa.html"
 			}
 		]
 	},
@@ -24,19 +24,19 @@ var $albums = [
 		albumName: "coffee",
 		albumPic: [
 			{
-				fileNm: "images/thinkCoffee.jpeg",
+				fileNm: "./dist/images/thinkCoffee.jpeg",
 				label: "Coffee Heaven/Haven",
-				href: "images/thinkCoffee.html"
+				href: "./dist/images/thinkCoffee.html"
 			},
 			{
-				fileNm: "images/heartLatte.jpeg",
+				fileNm: "./dist/images/heartLatte.jpeg",
 				label: "Latte wth love",
-				href: "images/heartLatte.html"
+				href: "./dist/images/heartLatte.html"
 			},
 			{
-				fileNm: "images/coffeeBeans.jpeg",
+				fileNm: "./dist/images/coffeeBeans.jpeg",
 				label: "Beans Beans Beans",
-				href: "images/coffeeBeans.html"
+				href: "./dist/images/coffeeBeans.html"
 			}
 		]
 	},
@@ -44,19 +44,19 @@ var $albums = [
 		albumName: "beaches",
 		albumPic: [
 			{
-				fileNm: "images/sunsetBeach.jpeg",
+				fileNm: "./dist/images/sunsetBeach.jpeg",
 				label: "Beautiful Sunset",
-				href: "images/sunsetBeach.html"
+				href: "./dist/images/sunsetBeach.html"
 			},
 			{
-				fileNm: "images/footprintsBeach.jpeg",
+				fileNm: "./dist/images/footprintsBeach.jpeg",
 				label: "Footprints",
-				href: "images/footprintsBeach.html"
+				href: "./dist/images/footprintsBeach.html"
 			},
 			{
-				fileNm: "images//blackandwhiteBeach.jpeg",
+				fileNm: "./dist/images//blackandwhiteBeach.jpeg",
 				label: "Beach",
-				href: "images/blackandwhiteBeach.html"
+				href: "./dist/images/blackandwhiteBeach.html"
 			}
 		]
 	},
@@ -64,19 +64,19 @@ var $albums = [
 		albumName: "horses",
 		albumPic: [
 			{
-				fileNm: "images/pony.jpeg",
+				fileNm: "./dist/images/pony.jpeg",
 				label: "My little pony",
-				href: "images/pony.html"
+				href: "./dist/images/pony.html"
 			},
 			{
-				fileNm: "images/teethHorse.jpeg",
+				fileNm: "./dist/images/teethHorse.jpeg",
 				label: "Happy Horse",
-				href: "images/teethHorse.html"
+				href: "./dist/images/teethHorse.html"
 			},
 			{
-				fileNm: "images/whiteHorse.jpeg",
+				fileNm: "./dist/images/whiteHorse.jpeg",
 				label: "Beautiful Horse",
-				href: "images/whiteHorse.html"
+				href: "./dist/images/whiteHorse.html"
 			}
 		]
 	},
@@ -84,19 +84,19 @@ var $albums = [
 		albumName: "ns",
 		albumPic: [
 			{
-				fileNm: "images/moon.jpeg",
+				fileNm: "./dist/images/moon.jpeg",
 				label: "Moon-time",
-				href: "images/moon.html"
+				href: "./dist/images/moon.html"
 			},
 			{
-				fileNm: "images/starryNight.jpeg",
+				fileNm: "./dist/images/starryNight.jpeg",
 				label: "Stars",
-				href: "images/starryNight.html"
+				href: "./dist/images/starryNight.html"
 			},
 			{
-				fileNm: "images/nightsky.jpeg",
+				fileNm: "./dist/images/nightsky.jpeg",
 				label: "Night Sky",
-				href: "images/nightsky.html"
+				href: "./dist/images/nightsky.html"
 			}
 		]
 	},
@@ -104,19 +104,19 @@ var $albums = [
 		albumName: "flowers",
 		albumPic: [
 			{
-				fileNm: "images/redPoppy.jpeg",
+				fileNm: "./dist/images/redPoppy.jpeg",
 				label: "Red Poppy",
-				href: "images/redPoppy.html"
+				href: "./dist/images/redPoppy.html"
 			},
 			{
-				fileNm: "images/blossom.jpeg",
+				fileNm: "./dist/images/blossom.jpeg",
 				label: "Tree in Bloom",
-				href: "images/blossom.html"
+				href: "./dist/images/blossom.html"
 			},
 			{
-				fileNm: "images/roses.jpeg",
+				fileNm: "./dist/images/roses.jpeg",
 				label: "Antique Roses",
-				href: "images/roses.html"
+				href: "./dist/images/roses.html"
 			}
 		]
 	}
